@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Click the button to demonstrate the prompt box.</p>
+<button onclick="myFunction()">Try it</button>
+<p id="printPhrase"></p>
+<p id="printArray"></p>
+<p id="printSize"></p>
+<p id="hightolow"></p>
+<script>
+function myFunction() {
+  let low = prompt("Enter a low value");
+  let high = prompt("Enter a high value");
+  let index = 0;
+  const array = [];
+  
+  for(let i = low; i<=high; i++){
+  	if(i % 7 == 0){
+    	array[index] = i;
+        index++;
+    }
+  }  
+  let size = array.length;
+  let reverse = array.reverse();
+  document.getElementById("printPhrase").innerHTML = ("Numbers divisible by 7 from "+low+" to "+high);
+  document.getElementById("printArray").innerHTML = array;
+  document.getElementById("printSize").innerHTML = ("Length: "+size);
+  document.getElementById("hightolow").innerHTML = ("The numbers from high to low: "+reverse);
+
+}
+</script>
+</body>
+</html>
